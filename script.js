@@ -14,7 +14,7 @@ const menuData = {
   manakesh: [
     { name: { en: "Mankoushe Zaatar", ar: " منقوشة زعتر" }, description: "", id: "c1", price: "$0.5", image: "icon/zaatar.jpeg" },
     { name: { en: "Mankoushe Zaatar with vegetables", ar: "منقوشة زعتر مع خضرة" }, description: "", id: "c2", price: "$1", image: "icon/zaatarkhodra.jpeg" },
-    { name: { en: "Mankoushe Cheese", ar: "جبنة" }, description: "", id: "c3", price: "$2", image: "icon/jebne.jpeg" },
+    { name: { en: "Mankoushe Cheese", ar: "منقوشة جبنة" }, description: "", id: "c3", price: "$2", image: "icon/jebne.jpeg" },
     { name: { en: "Mankoushe Kashkawan Cheese", ar: "منقوشة جبنة قشقوان" }, description: "", id: "c4", price: "$3", image: "icon/jebneqash.jpeg" },
     { name: { en: "Mankoushe Cheese and Sojok", ar: "منقوشة جبنة وسجق" }, description: "", id: "c5", price: "$3", image: "icon/jebnesojok.jpeg" },
     { name: { en: "Mankoushe Tawouk", ar: "منقوشة طاووق" }, description: "", id: "c6", price: "$3", image: "icon/tawouk.jpeg" }
@@ -45,7 +45,7 @@ const menuData = {
     { name: { en: "Croissant Zaatar", ar: "كرواسون زعتر" }, id: "s3", price: "$0.5", image: "icon/kerzaatar.jpeg" }
   ],
   desserts: [
-    { name: { en: "Cinnamon rolls", ar: "Cinnamon rolls" }, id: "d1", price: "$2", image: "icon/cinamon.jpeg" },
+    { name: { en: "Cinnamon rolls", ar: "سينامون رولز" }, id: "d1", price: "$2", image: "icon/cinamon.jpeg" },
     //{ name: { en: "Rasgulla", ar: "راسغولا" }, id: "d2", price: "$5", image: "icon/rasgulla.jpeg" },
     //{ name: { en: "Jalebi", ar: "زلابية" }, id: "d3", price: "$4", image: "icon/jalebi.jpeg" },
     //{ name: { en: "Kheer", ar: "أرز بلبن" }, id: "d4", price: "$6", image: "icon/kheer.jpeg" },
@@ -97,12 +97,12 @@ const translations = {
     reset: "إعادة تعيين",
     whatsapp: "إرسال عبر واتساب",
     catTitles: {
-      beverages: "المشروبات 🍹",
-      manakesh: "مناقيش 🫓",
-      pizza: " بيتزا 🍕",
-      mo3ajanat: "معجنات 🥟",
-      croissant: "كرواسن 🥐",
-      desserts: "حلويات 🍰"
+      beverages: "🍹 المشروبات",
+      manakesh: "🫓 مناقيش",
+      pizza: "🍕 بيتزا",
+      mo3ajanat: "🥟 معجنات",
+      croissant: "🥐 كرواسون",
+      desserts: "🍰 حلويات"
     },
     thanksTitle: "تم إرسال الطلب!",
     thanksMsg: "تم إرسال طلبك بنجاح. سنتواصل معك قريباً.",
@@ -381,15 +381,15 @@ deliveryDropdown.addEventListener('change', function() {
         const legend = isAr ? "رقم الطاولة" : "Table Number";
         dynamicArea.innerHTML = `
             <fieldset style="border: 1px solid #444; border-radius: 8px; padding: 10px;">
-                <legend style="padding: 0 10px; font-size: 0.9rem; color:green;">${legend}</legend>
-                <input type="number" id="tableInput" style="width: 100%; background-color:white; border: none; color: black; outline: none;" placeholder="...">
+                <legend style="padding: 0 10px; font-size: 0.9rem; color:white;">${legend}</legend>
+                <input type="number" id="tableInput" style="width: 100%; background-color:white;padding:2px; border: none; color: black; outline: none;" placeholder="...">
             </fieldset>`;
     } else if (choice === 'pickup') {
         const legend = isAr ? "وقت الاستلام" : "What time do you want the order?";
         dynamicArea.innerHTML = `
             <fieldset style="border: 1px solid #444; border-radius: 8px; padding: 10px;">
-                <legend style="padding: 0 10px; font-size: 0.9rem;color:green;">${legend}</legend>
-                <input type="time" id="timeInput" style="width: 100%; background-color:white; border: none; color: black; outline: none;">
+                <legend style="padding: 0 10px; font-size: 0.9rem;color:white;">${legend}</legend>
+                <input type="time" id="timeInput" style="width: 100%; padding:2px; background-color:white; border: none; color: black; outline: none;">
             </fieldset>`;
     }
 });
