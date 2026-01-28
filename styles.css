@@ -18,17 +18,12 @@ body {
   padding: 0;
   display: flex;
   flex-direction: column;
-  /* Stops the "bounce" effect and the pull-to-refresh gesture */
-  overscroll-behavior-y: none;
-
 }
 
 :root {
   --main-color: #272525;
-  /* Global variable for the main color */
   --hover-color: #3cab05;
   --font-stack: Helvetica, Arial, sans-serif;
-  /* Global variable for font family */
 }
 
 /* Fix Content Wrapping */
@@ -138,11 +133,8 @@ header {
   width: 100%;
   max-width: 1000px;
   height: 200px;
-
-  /* Centers the grid container itself */
   margin: 0 auto;
-
-  /* Centers the cards horizontally within their grid cells */
+  margin-bottom: 40px;
   justify-items: center;
 }
 
@@ -250,11 +242,8 @@ header {
 
 .item img {
   width: 100%;
-  /* Image fills the card */
   height: 150px;
-  /* Fixed height for uniformity */
   object-fit: cover;
-  /* Ensures image scales properly */
   border-radius: 10px;
 }
 
@@ -311,10 +300,10 @@ header {
   font-weight: bold;
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
   cursor: pointer;
-  width: 200px;
+  width: 300px;
   /* Standard width for desktop */
   transition: transform 0.2s, background-color 0.2s;
-  font-size: 1em;
+  font-size: 0.8em;
   height: 40px;
 }
 
@@ -444,7 +433,7 @@ p.cart {
 
 .deleteQuantity {
   width: 30px;
-  height: 3opx;
+  height: 30px;
   text-align: center;
   padding: 1px;
   margin-right: 5px;
@@ -455,7 +444,7 @@ p.cart {
 
 .addQuantity {
   width: 30px;
-  height: 3opx;
+  height: 30px;
   text-align: center;
   padding: 1px;
   margin-left: 5px;
@@ -473,10 +462,8 @@ p.cart {
   color: white;
   padding: 20px 0;
   display: flex;
-  /* 1. Stack children vertically */
   flex-direction: column;
   align-items: center;
-  /* 2. Center buttons horizontally */
   gap: 15px;
   justify-content: flex-start;
   margin-top: auto;
@@ -750,14 +737,14 @@ footer .designer {
   #notes {
     padding: 5px;
     width: 200px;
-    font-size: 0.8rem;
+    font-size: 0.7rem;
     height: 30px;
 
   }
 
   #proceed {
 
-    font-size: 0.8rem;
+    font-size: 0.7rem;
     padding: 5px 5px;
     width: 20vw;
     text-align: center;
@@ -811,6 +798,7 @@ footer .designer {
     align-items: center;
     text-align: center;
     padding-bottom: 40px;
+    margin-bottom: 40px;
 
   }
 
@@ -897,7 +885,7 @@ footer .designer {
 
   #notes,
   #floatingProceed {
-    width: 90%;
+    width: 60%;
     /* Buttons take up most of the screen width */
     max-width: 350px;
     padding: 5px;
@@ -1009,7 +997,7 @@ footer .designer {
   }
 
   .categories {
-    margin-bottom: 50px;
+    margin-bottom: 70px;
   }
 
   /* Fix Text Alignment and Spacing */
@@ -1079,21 +1067,23 @@ footer .designer {
 
     h2 {
       font-size: 0.9rem;
-    }
+    };
   }
 
-  .floating-proceed-btn {
-    width: 180px;
+  button#floatingProceed.floating-proceed-btn {
+    width: 120px;
     left: 10px;
-    font-size: 0.8rem;
-    height: 40px;
+    font-size: 0.6rem;
+    height: 30px;
+    padding:2px;
   }
 
-  .notesBtn {
-    width: 180px;
+  button#notes.notesBtn {
+    width: 120px;
     right: 10px;
-    font-size: 0.8rem;
-    height: 40px;
+    font-size: 0.7rem;
+    height: 30px;
+    margin-top:10px;
   }
 
   #editButton,
@@ -1116,5 +1106,12 @@ footer .designer {
     height: 50px;
 
   }
-
+footer p{
+  font-size: 0.6rem;
+  margin-bottom: 0px;
+  padding: 3px;
+}
+footer{
+  height:25px;
+}
 }
