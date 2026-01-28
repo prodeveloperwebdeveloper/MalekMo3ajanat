@@ -678,7 +678,7 @@ footer .designer {
 
 
 /* Responsive Design */
-@media (max-width: 690px) {
+@media (max-width: 740px) {
   h1 {
     font-size: 1.8rem;
     text-align: center;
