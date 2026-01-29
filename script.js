@@ -97,12 +97,12 @@ const translations = {
     reset: "إعادة تعيين",
     whatsapp: "إرسال عبر واتساب",
     catTitles: {
-      beverages: "🍹 المشروبات",
-      manakesh: "🫓 مناقيش",
-      pizza: "🍕 بيتزا",
-      mo3ajanat: "🥟 معجنات",
-      croissant: "🥐 كرواسون",
-      desserts: "🍰 حلويات"
+      beverages: " المشروبات 🍹",
+      manakesh: " مناقيش 🫓",
+      pizza: " بيتزا 🍕",
+      mo3ajanat: " معجنات 🥟",
+      croissant: " كرواسون 🥐",
+      desserts: " حلويات 🍰"
     },
     thanksTitle: "تم إرسال الطلب!",
     thanksMsg: "تم إرسال طلبك بنجاح. سنتواصل معك قريباً.",
@@ -395,11 +395,12 @@ deliveryDropdown.addEventListener('change', function() {
 
     if (choice === 'fast') {
         const legend = isAr ? "رقم الطاولة" : "Table Number";
-        dynamicArea.innerHTML = `
-            <fieldset style="border: 1px solid #444; border-radius: 8px; padding: 10px;">
-                <legend style="padding: 0 10px; font-size: 0.9rem; color:white;">${legend}</legend>
-                <input type="text" id="tableInput" style="width: 100%; background-color:white;padding:2px; border: none; color: black; outline: none;" placeholder="...">
-            </fieldset>`;
+        dynamicArea.innerHTML = `<fieldset style="border: 1px solid #444; border-radius: 8px; padding: 10px;">
+    <legend style="padding: 0 10px; font-size: 0.9rem; color:white;">${legend}</legend>
+    <select id="tableInput" style="width: 75%; background-color:white; padding:2px; border: none; color: black; outline: none; cursor: pointer;">
+        ${Array.from({ length: 10 }, (_, i) => `<option value="${i + 1}">${i + 1}</option>`).join('')}
+    </select>
+</fieldset>`;
     } else if (choice === 'pickup') {
         const legend = isAr ? "وقت الاستلام" : "What time do you want the order?";
         dynamicArea.innerHTML = `

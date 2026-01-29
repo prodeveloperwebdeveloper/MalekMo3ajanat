@@ -136,6 +136,7 @@ header {
   margin: 0 auto;
   margin-bottom: 100px;
   justify-items: center;
+  justify-content: center;
 }
 
 #category-title {
@@ -145,33 +146,33 @@ header {
 .category-card {
   text-align: center;
   padding: 20px;
-  background: rgba(50, 46, 46, 0.899);
+  background: black;
   border-radius: 15px;
   backdrop-filter: blur(15px);
   border: 1px solid rgba(255, 255, 255, 0.3);
   cursor: pointer;
   transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease;
   overflow: hidden;
-  /* Prevents image from overflowing */
   width: 180px;
-  /* Adjust as needed */
   height: 100px;
+  justify-content: center;
+   display: flex;            /* Enables Flexbox */
+  justify-content: center;   /* Centers horizontally */
+  align-items: center; 
 }
 
 /* Hover Effect */
 .category-card:hover {
   transform: translateY(-10px);
   box-shadow: 0 12px 24px rgba(0, 0, 0, 0.4);
-  background-color: #ff914d
+  background-color: #ff914d;
 }
 
 /* Improved Image Placement */
 .category-card img {
   width: 100%;
   height: 120px;
-  /* Adjust height for a perfect fit */
   object-fit: cover;
-  /* Ensures image covers the card without distortion */
   border-radius: 10px;
   margin-bottom: 15px;
   filter: drop-shadow(2px 2px 5px rgba(0, 0, 0, 0.3));
@@ -199,9 +200,7 @@ header {
   gap: 20px;
   padding: 20px;
   justify-content: center;
-  /* Centers content inside the grid cells */
   justify-items: center;
-  /* THIS ADDS THE SPACE AT THE BOTTOM */
   padding-bottom: 200px;
 }
 
@@ -210,28 +209,23 @@ header {
 .item {
   width: 100%;
   max-width: 280px;
-  /* Prevents cards from getting too large on big screens */
   display: flex;
   flex-direction: column;
   align-items: center;
-  /* Centers image and text inside the card */
   text-align: center;
   background: #000;
   color: white;
   padding: 15px;
   border-radius: 10px;
   width: 100%;
-  /* Make sure it fills the container */
   max-width: 200px;
-  /* Prevents oversized cards */
   height: auto;
-  /* Auto height to fit content */
 }
 
 /* Hover Effect */
 .item:hover {
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.4);
-  background: rgba(4, 200, 239, 0.315);
+  background: RGB(255, 145, 77, 0.315);
 
   p.cart {
     color: var(--hover-color)
@@ -678,7 +672,7 @@ footer .designer {
 
 
 /* Responsive Design */
-@media (max-width: 740px) {
+@media (max-width: 680px) {
   h1 {
     font-size: 1.8rem;
     text-align: center;
